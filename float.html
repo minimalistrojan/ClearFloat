@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Float</title>
+
+	<style type="text/css">
+		/* 全局文字、背景色 */
+		body{
+			color: #445252;
+			font-family: sans-serif;
+			font-size: 16px;
+			background: #F7E4C5;
+		}
+
+		/* 第一行div 和 第二行div 的大小等 */
+		.first div,
+		.second{
+			width: 100px;
+			height: 100px;
+			line-height: 100px;
+			text-align: center;
+			border-radius: 8px;
+		}
+
+		/* 第一行三个 div 的颜色及外边距 */
+		.first div{
+			margin: 20px;
+			background: #F8937E;
+			float: left;
+		}
+
+		/* 第一行三个 div 父级容器边框 */
+		.first{
+			/* ----- 清除浮动方法之 设置高度 ----- */
+			/*height: 400px;*/
+
+			/* ----- 清除浮动方法之 overflow ----- */
+			/*overflow: auto;*/
+			/*overflow: hidden;*/
+			border: 1px solid red;
+		}
+
+		/* 第二行 div 的颜色及外边框*/
+		.second{
+			margin: 40px;
+			background: #E73A38;
+		}
+
+		/* ----- 清除浮动方法之 空元素 ----- */
+		/*.clear{
+			clear: both;
+			border: 1px solid green;
+		}*/
+
+		/* ----- 清除浮动方法之 伪元素 ----- */
+		.first::after{
+			content: '';
+			display: block;
+			width: 0;
+			height: 0;
+			clear: both;
+			border: 1px solid brown;
+		}
+	</style>
+
+</head>
+
+
+<body>
+
+	<div class="first">
+		<div>First-A</div>
+		<div>First-B</div>
+		<div>First-C</div>
+	</div>
+
+	<!-- <div class="clear"></div> -->
+	<div class="second">Second</div>
+</body>
+</html>
