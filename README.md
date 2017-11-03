@@ -12,7 +12,7 @@
 
 根据文档流的原理，我们想让第一行水平排列三个 `div` 元素（为了明显，为三个 `div` 的父级容器加上了红色的边框），第二行只放一个 `div` 元素。也就是这样：
 
-<img src="01-perfect.png" width="100%" alt="正确布局"/>
+<img src="http://taojun.name/tech/archive/front-end/2017-10-20-HTML-CSS-methods-of-clear-float/01-perfect.png" width="100%" alt="正确布局"/>
 
 ```html
 <!DOCTYPE html>
@@ -75,7 +75,7 @@
 
 之前是我们预想的效果。但当对第一行的三个 `div` 元素应用 `float: left;` 使其水平并列排列的时，真实效果如上图：
 
-<img src="02-problem.png" width="100%" alt="排版错位"/>
+<img src="http://taojun.name/tech/archive/front-end/2017-10-20-HTML-CSS-methods-of-clear-float/02-problem.png" width="100%" alt="排版错位"/>
 
 其中有几个问题：
 
@@ -85,7 +85,7 @@
 
 - 这一条其实这不能算一个问题，可以看做一个特性：浮动元素（`.first > div`）不会影响未浮动元素中（`div.second`）的文字，而是保留在原来位置。开发者会利用这一特性绕排文字，就像这样（自己动手改变一下样式试试。当然，你可以查看我写的 <a href="text-surrounding.html" target="_blank_">text-surrounding.html</a> ）：
 
-  ![文字绕排](03-text-surrounding.png)
+  ![文字绕排](http://taojun.name/tech/archive/front-end/2017-10-20-HTML-CSS-methods-of-clear-float/03-text-surrounding.png)
 
 #### 解决方法
 
@@ -105,7 +105,7 @@
 
 效果如下图：
 
-<img src="04-1-set-height.png" width="100%" alt="给浮动元素的父级元素设置高度"/>
+<img src="http://taojun.name/tech/archive/front-end/2017-10-20-HTML-CSS-methods-of-clear-float/04-1-set-height.png" width="100%" alt="给浮动元素的父级元素设置高度"/>
 
 缺点：需在内容尺寸确定的情况下设置固定高度；无法实现容器高度被内容自动撑开。
 
@@ -144,7 +144,7 @@
 
 效果如下：
 
-<img src="04-2-blank-element.png" width="100%" alt=" 通过空元素"/>
+<img src="http://taojun.name/tech/archive/front-end/2017-10-20-HTML-CSS-methods-of-clear-float/04-2-blank-element.png" width="100%" alt=" 通过空元素"/>
 
 
 
@@ -179,7 +179,7 @@
 
 效果如下（注意观察在红色边框的左下角，有一个特别小的点，那就是伪元素代码中的棕色边框）：
 
-<img src="04-3-pseudo-element.png" alt="通过伪元素"/>
+<img src="http://taojun.name/tech/archive/front-end/2017-10-20-HTML-CSS-methods-of-clear-float/04-3-pseudo-element.png" alt="通过伪元素"/>
 
 **4. 对浮动元素的父级元素应用 `overflow: hidden;` 或 `overflow: auto;`**
 
@@ -189,7 +189,7 @@
 
 效果如下：
 
-<img src="04-4-overflow.png" width="100%" alt="通过 oveflow"/>
+<img src="http://taojun.name/tech/archive/front-end/2017-10-20-HTML-CSS-methods-of-clear-float/04-4-overflow.png" width="100%" alt="通过 oveflow"/>
 
 
 
@@ -201,7 +201,7 @@
 
 
 
-本文实例的 Github 项目链接：
+在我的个站阅读这篇文章：[清除浮动的几种方式](http://taojun.name/tech/archive/front-end/2017-10-20-HTML-CSS-methods-of-clear-float/index.html)
 
 
 
